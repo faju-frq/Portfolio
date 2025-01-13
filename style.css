@@ -133,7 +133,6 @@ li a {
   font-weight: 400;
   margin-top: 0;
   margin-right: 30px;
-  /* margin-bottom: 3px; */
 }
 
 .card h3 {
@@ -204,6 +203,7 @@ li a {
 }
 
 /* About Section */
+
 .section-heading h2 {
   text-align: center;
   padding: 50px;
@@ -267,6 +267,8 @@ hr {
 }
 
 /* Experience Section */
+
+
 .experience-content {
   display: flex;
   justify-content: center;
@@ -294,11 +296,7 @@ hr {
   width: 2px;
   height: calc(100% - 11.15px);
   background-color: #000;
-
   margin: 10px 10px;
-
-
-
 }
 
 .experienceRow {
@@ -313,17 +311,15 @@ hr {
   max-width: 400px;
 }
 
-
 .experienceTitle {
   text-align: end;
 }
-
-
 
 .hidden-left {
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
+  overflow: hidden;
 }
 
 .hidden-right {
@@ -339,6 +335,8 @@ hr {
 }
 
 /* Portfolio Section */
+
+
 .isotope:after {
   content: "";
   display: block;
@@ -396,20 +394,24 @@ hr {
 }
 
 /* Certifications Section */
+
+
 .certificates {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
-  padding: 50px;
+  padding: 5em;
 }
 
 .certificateImg {
-  max-width: 400px;
-  height: auto;
+  width: 25em;
+  height: 20em;
 }
 
 /* Skills Section */
+
+
 .item {
   padding: 50px;
   display: flex;
@@ -491,6 +493,64 @@ input[type="submit"] {
 }
 
 /* Media Queries */
+@media (width <=480px) {
+  .certificateImg {
+    width: 20em;
+    height: 15em;
+  }
+
+  .form {
+    margin: 0 10px;
+  }
+
+  .landingPage {
+    margin-top: 4.8em;
+  }
+
+  .certificate {
+    margin: 10px;
+  }
+
+  .card img {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50%;
+    border: 12px solid var(--card);
+    box-shadow: none;
+    margin: -140px 0 30px 0;
+  }
+
+  .experience-content {
+    display: grid;
+    font-size: 12px;
+    padding: 25px;
+  }
+
+  .main-timeline {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 1fr;
+  }
+
+  .aligned {
+    left: 3%;
+  }
+
+  .main-timeline::before {
+    top: 7%;
+  }
+
+  .aligned {
+    margin: 20px;
+    top: -18px;
+    left: 7.8%;
+  }
+
+  .experienceRow {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 1fr;
+  }
+}
+
 @media (width <=600px) {
   .card {
     margin: 0 40px;
@@ -530,71 +590,7 @@ input[type="submit"] {
   }
 }
 
-@media (width <=480px) {
-  .form{
-    margin: 0 10px;
-  }
-  .certificate{
-    margin: 10px;
-  }
-  .card img {
-    height: 50vw;
-    width: 50vw;
-    border-radius: 50%;
-    border: 12px solid var(--card);
-    box-shadow: none;
-    margin: -140px 0 30px 0;
-  }
-
-  .experience-content {
-    display: grid;
-
-    font-size: 12px;
-    padding: 25px;
-  }
-
-  .main-timeline {
-    display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
-  }
-
-  .aligned {
-    left: 3%;
-  }
-
-  .main-timeline::before {
-    top: 7%;
-  }
-
-  .aligned {
-    margin: 20px;
-    top: -18px;
-    left: 7.8%;
-  }
-
-  .experienceRow {
-    display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
-  }
-}
-
-@media screen and (width<=1200px) {
-  .eduRow {
-    padding: 1%;
-  }
-}
-
-@media screen and (width<=1024px) {
-  .eduRow {
-    font-size: small;
-  }
-
-  .item {
-    flex: 1 1 30%;
-  }
-}
-
-@media screen and (width<=768px) {
+@media screen and (width <=768px) {
   .hidden-left {
     transform: translateY(50%);
     opacity: 0;
@@ -651,17 +647,14 @@ input[type="submit"] {
 
   .navContent {
     display: none;
-    /* Hide menu by default */
     flex-direction: column;
     background-color: white;
     width: 100%;
-
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .navContent.show {
     display: flex;
-    /* Show menu when toggled */
   }
 
   .navContent li {
@@ -670,12 +663,10 @@ input[type="submit"] {
 
   .icon {
     display: block;
-    /* Show hamburger icon */
   }
 
   .navContent .icon {
     display: block;
-    /* Show close icon inside menu */
   }
 
   .navContent .icon i {
@@ -713,7 +704,6 @@ input[type="submit"] {
   .container ul li a {
     display: block;
     width: 100%;
-
     text-align: center;
   }
 
@@ -721,7 +711,21 @@ input[type="submit"] {
     background-color: #f1f1f1;
   }
 
-  .landingPage {
-    margin-top: 50px;
+ 
+}
+
+@media screen and (width <=1024px) {
+  .eduRow {
+    font-size: small;
+  }
+
+  .item {
+    flex: 1 1 30%;
+  }
+}
+
+@media screen and (width <=1200px) {
+  .eduRow {
+    padding: 1%;
   }
 }
