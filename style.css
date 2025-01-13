@@ -13,9 +13,6 @@
   --secondary: rgba(237, 239, 240, 0.205);
 }
 
-:target {
-  scroll-margin-top: 89px;
-}
 
 /* Sections with Secondary Background */
 .education,
@@ -99,7 +96,6 @@ li a {
   align-items: center;
   justify-content: center;
   margin: 0;
-  height: 100vh;
   background: var(--gradient);
   color: #fdfcfd;
   padding-top: 30px;
@@ -320,14 +316,14 @@ hr {
 }
 
 .hidden-left {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
   overflow: hidden;
 }
 
 .hidden-right {
-  transform: translateX(100%);
+  transform: translateX(50%);
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
   overflow: hidden;
@@ -505,7 +501,7 @@ input[type="submit"] {
   }
 
   .landingPage {
-    margin-top: 4.8em;
+    /* margin-top: 4.8em; */
   }
 
   .certificates {
@@ -515,6 +511,11 @@ input[type="submit"] {
   .certificate {
     margin: 10px;
 
+  }
+
+  .card {
+
+    /* height: 50vh; */
   }
 
   .card img {
@@ -541,6 +542,10 @@ input[type="submit"] {
 }
 
 @media (width <=600px) {
+  .landingPage {
+    padding: 200px 0 100px 0;
+  }
+
   .card {
     margin: 0 40px;
     padding-left: 50px;
@@ -553,7 +558,11 @@ input[type="submit"] {
 
   .card h2 {
     margin-right: 0;
-    font-size: 26px;
+    font-size: 20px;
+  }
+
+  .card h3 {
+    font-size: 15px;
   }
 
   .card img {
@@ -618,14 +627,23 @@ input[type="submit"] {
   }
 
   .eduRow {
+    text-align: center;
     width: 60%;
     margin: 1rem;
   }
 
   .SkillLogos {
-    display: grid;
-    grid-template-columns: repeat(2,  1fr);
-    place-items: center;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-item: center; */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    flex: 1 1 45% !important;
+    padding: 1em;
+    text-align: center;
   }
 
 
