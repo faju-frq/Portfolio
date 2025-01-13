@@ -2,15 +2,16 @@
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-if(window.innerWidth <= 768){
-  document.getElementById("mobile").setAttribute("href","tel:+919400788965")
+if (window.innerWidth <= 768) {
+  document.getElementById("mobile").setAttribute("href", "tel:+919400788965");
+  
 }
 function toggleMenu() {
   const navContent = document.getElementById("navContent");
   navContent.classList.toggle("show");
-  document.getElementById("icon").classList.add("paddingLeft")
-  document.getElementById("navContent").classList.remove("container")
-  document.getElementById("navContent").classList.add("zeroPadding")
+  document.getElementById("icon").classList.add("paddingLeft");
+  document.getElementById("navContent").classList.remove("container");
+  document.getElementById("navContent").classList.add("zeroPadding");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
