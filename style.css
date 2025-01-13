@@ -19,8 +19,7 @@
 
 /* Sections with Secondary Background */
 .education,
-.portfolio,
-.Skills {
+.Certifications {
   background-color: var(--secondary);
 }
 
@@ -162,6 +161,11 @@ li a {
   text-decoration: none;
   background-color: #3f3b39;
   padding: 12px;
+  color: white;
+}
+
+.cvBtn a:hover {
+  color: rgb(0, 174, 255);
 }
 
 .socials>a {
@@ -414,9 +418,6 @@ hr {
 
 .item {
   padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   opacity: 0.7;
 }
 
@@ -493,7 +494,7 @@ input[type="submit"] {
 }
 
 /* Media Queries */
-@media (width <=480px) {
+@media screen and (width <=480px) {
   .certificateImg {
     width: 20em;
     height: 15em;
@@ -507,8 +508,13 @@ input[type="submit"] {
     margin-top: 4.8em;
   }
 
+  .certificates {
+    padding: 0;
+  }
+
   .certificate {
     margin: 10px;
+
   }
 
   .card img {
@@ -526,29 +532,12 @@ input[type="submit"] {
     padding: 25px;
   }
 
-  .main-timeline {
-    display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
-  }
-
-  .aligned {
-    left: 3%;
-  }
-
-  .main-timeline::before {
-    top: 7%;
-  }
-
-  .aligned {
-    margin: 20px;
-    top: -18px;
-    left: 7.8%;
-  }
-
   .experienceRow {
     display: grid;
     grid-template-columns: 1fr 0.1fr 1fr;
   }
+
+
 }
 
 @media (width <=600px) {
@@ -595,6 +584,7 @@ input[type="submit"] {
     transform: translateY(50%);
     opacity: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
+    overflow: hidden;
   }
 
   .hidden-right {
@@ -632,9 +622,12 @@ input[type="submit"] {
     margin: 1rem;
   }
 
-  .item {
-    flex: 1 1 45%;
+  .SkillLogos {
+    display: grid;
+    grid-template-columns: repeat(2,  1fr);
+    place-items: center;
   }
+
 
   .isotope .item {
     max-width: 350px;
@@ -711,7 +704,7 @@ input[type="submit"] {
     background-color: #f1f1f1;
   }
 
- 
+
 }
 
 @media screen and (width <=1024px) {
